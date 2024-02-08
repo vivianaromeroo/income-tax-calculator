@@ -5,7 +5,7 @@ flatRate = 0.20
 standardDeduction = 10000.0
 dependentDeduction = 3000.0
 
-standardTax = grossIncome * flatRate
-deductedTax = standardTax - standardDeduction - dependentDeduction * numDependents
+taxableIncome = grossIncome - standardDeduction - dependentDeduction * numDependents
+incomeTax = flatRate * taxableIncome
 
-print(f'The income tax is ${deductedTax}')
+print(f'The income tax is ${incomeTax}')
